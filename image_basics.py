@@ -5,7 +5,7 @@ import SimpleITK as sitk
 # --- DO NOT CHANGE ---
 def _get_registration_method(atlas_img, img) -> sitk.ImageRegistrationMethod:
     registration_method = sitk.ImageRegistrationMethod()
-
+ 
     # Similarity metric settings.
     registration_method.SetMetricAsMattesMutualInformation(numberOfHistogramBins=50)
     registration_method.SetMetricSamplingStrategy(registration_method.REGULAR)
